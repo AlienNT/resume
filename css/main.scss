@@ -1,0 +1,179 @@
+@import "normalize";
+@import "variables";
+
+* {
+  color: $mainColor;
+  font-family: sans-serif;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+a {
+  color: $linkColor;
+  font-weight: 600;
+
+  &:hover {
+    color: lighten($linkColor, 15%)
+  }
+}
+
+.container {
+  max-width: $containerWidth;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  margin-right: -15px;
+  margin-left: -15px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.col {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.col-6 {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 50%;
+  flex: 1 1 50%;
+}
+
+.col-12 {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+}
+
+.resume {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 50px 15px;
+}
+
+.resume__container {
+  background: white;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 5px 0 $mainColor;
+  box-shadow: 0 0 5px 0 $mainColor;
+  overflow: hidden;
+
+}
+
+.resume__wrapper {
+  position: relative;
+}
+
+.list__item, .info__wrapper {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.resume__list {
+  .list__item {
+    border-bottom: 2px solid $hrColor;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.info-col {
+  min-width: 280px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 15%;
+  flex: 1 1 15%;
+  background: $infoBg;
+}
+
+.info-col, .education-col {
+  padding-top: 75px;
+  padding-bottom: 50px;
+}
+
+.resume__row {
+  position: relative;
+
+  .row {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+.main-title {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 2px solid $borderColor;
+  z-index: 9;
+  padding: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.title {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.title, .info__title, .degree {
+  font-weight: 600;
+
+}
+
+.info__title, .degree {
+  font-size: 16px;
+}
+
+.description, .university {
+  font-size: 14px;
+}
+
+.university {
+  font-style: italic;
+}
+
+.date {
+  color: $dateColor;
+  font-size: 14px;
+  text-align: right;
+  padding: 8px 0;
+}
+
+.row {
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
